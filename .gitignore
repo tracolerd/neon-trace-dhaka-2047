@@ -2,12 +2,13 @@
 .godot/
 .import/
 export.cfg
-export_presets.cfg
 
 # Build output
 builds/
 exports/
 *.zip
+*.apk
+*.aab
 
 # OS/editor files
 .DS_Store

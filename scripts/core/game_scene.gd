@@ -10,8 +10,10 @@
 @onready var checkpoint_manager: CheckpointManager = $CheckpointManager
 @onready var ending_manager: EndingManager = $EndingManager
 @onready var failure_manager: FailureManager = $FailureManager
+@onready var pause_menu: Control = $UILayer/PauseMenu
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	EventBus.notification_requested.connect(_on_notification_requested)
 	EventBus.interaction_prompt_changed.connect(_on_interaction_prompt_changed)
 	EventBus.scanner_status_changed.connect(_on_scanner_status_changed)

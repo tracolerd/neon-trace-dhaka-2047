@@ -14,6 +14,7 @@
 [ext_resource path="res://scripts/gameplay/exit_zone.gd" type="Script" id="12_exit_zone"]
 [ext_resource path="res://scripts/gameplay/ending_manager.gd" type="Script" id="13_ending_manager"]
 [ext_resource path="res://scripts/gameplay/failure_manager.gd" type="Script" id="14_failure_manager"]
+[ext_resource path="res://scenes/ui/PauseMenu.tscn" type="PackedScene" id="15_pause_menu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_floor"]
 size = Vector3(24, 0.2, 24)
@@ -193,3 +194,5 @@ theme_override_colors/font_color = Color(0.4, 0.9, 1.0, 1)
 
 [node name="EvidencePanel" parent="UILayer" instance=ExtResource("9_evidence_panel")]
 position = Vector2(0, 0)
+
+[node name="PauseMenu" parent="UILayer" instance=ExtResource("15_pause_menu")]
