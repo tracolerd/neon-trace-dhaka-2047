@@ -172,7 +172,9 @@ Size:     31,493,639 bytes
 SHA-256:  62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE
 ```
 
-The APK was generated successfully, but the `builds/android/` output directory is intentionally ignored by Git. The repository therefore does **not currently contain a downloadable APK blob**; the values above document the validated local build artifact.
+The local `builds/android/` output directory is intentionally ignored by Git, but the verified APK
+is publicly downloadable from the
+[v0.1.0 Android debug release](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/tag/v0.1.0-android-debug).
 
 ### Reproduce the build
 
@@ -198,6 +200,27 @@ adb install -r builds/android/NEON_TRACE_DHAKA_2047.apk
 
 ### Launch
 
+1. Clone the repository.
+2. Open Godot.
+3. Select **Import** / **Open Project**.
+4. Choose `project.godot` from the repository root.
+5. Press **F6/F5** as appropriate, or use **Run Project** from the editor.
+
+The configured main scene is the project's boot scene. fileciteturn5file0
+
+---
+
+## Export
+
+The repository includes Godot 4.7.2 Android export configuration. A verified arm64-v8a debug APK
+is available from the public release:
+
+[Download the Android debug APK](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/download/v0.1.0-android-debug/NEON_TRACE_DHAKA_2047.apk)
+
+Artifact details: `31,493,639` bytes, SHA-256
+`62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE`.
+
+From Godot:
 ```text
 1. Clone the repository
 2. Open Godot

@@ -13,10 +13,15 @@ Godot_v4.7.2-stable_win64_console.exe --headless --path . --editor --quit
 Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-debug "Android Debug" builds/android/NEON_TRACE_DHAKA_2047.apk
 ```
 
-The output directory is intentionally ignored by git. Install the APK on a test device with:
+The local output directory is intentionally ignored by git. The verified public download is the
+GitHub Release asset:
+
+**[Download NEON_TRACE_DHAKA_2047.apk](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/download/v0.1.0-android-debug/NEON_TRACE_DHAKA_2047.apk)**
+
+Install the downloaded APK on a test device with:
 
 ```text
-adb install -r builds/android/NEON_TRACE_DHAKA_2047.apk
+adb install -r NEON_TRACE_DHAKA_2047.apk
 ```
 
 The device must allow USB debugging and support arm64-v8a. Orientation is landscape. Press the
@@ -28,6 +33,7 @@ Info` is available there.
 The debug APK was exported successfully with Godot `4.7.2.stable.official.ed1daf0bf`:
 
 - Path: `builds/android/NEON_TRACE_DHAKA_2047.apk`
+- Public download: https://github.com/tracolerd/neon-trace-dhaka-2047/releases/download/v0.1.0-android-debug/NEON_TRACE_DHAKA_2047.apk
 - Size: `31,493,639` bytes
 - SHA-256: `62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE`
 - ABI: `arm64-v8a`
