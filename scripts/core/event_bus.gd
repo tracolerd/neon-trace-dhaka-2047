@@ -1,0 +1,16 @@
+﻿extends Node
+## Global signal bus. Systems communicate through signals instead of direct UI coupling.
+signal system_ready(system_name: String)
+signal player_action(action_name: String, payload: Dictionary)
+signal security_changed(intensity: float, state: String)
+signal mission_changed(mission_id: String, objective_id: String)
+signal objective_completed(mission_id: String, objective_id: String)
+signal mission_completed(mission_id: String)
+signal evidence_discovered(evidence_id: String)
+signal notification_requested(message: String, category: String)
+signal interaction_prompt_changed(prompt: String, visible: bool)
+signal scanner_status_changed(summary: String, active: bool)
+signal ai_detected(entity_name: String, intensity: float)
+signal ending_reached(ending_id: String, title: String)
+signal mission_failed(mission_id: String, reason: String)
+signal story_flag_changed(flag_name: String, value: Variant)

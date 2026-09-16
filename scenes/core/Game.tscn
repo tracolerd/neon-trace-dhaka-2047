@@ -1,0 +1,195 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource path="res://scripts/core/game_scene.gd" type="Script" id="1_game"]
+[ext_resource path="res://scripts/ai/security_manager.gd" type="Script" id="2_security"]
+[ext_resource path="res://scripts/evidence/evidence_manager.gd" type="Script" id="3_evidence"]
+[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id="4_player"]
+[ext_resource path="res://scenes/interactables/TestDoor.tscn" type="PackedScene" id="5_door"]
+[ext_resource path="res://scenes/interactables/TestTerminal.tscn" type="PackedScene" id="6_terminal"]
+[ext_resource path="res://scripts/hacking/hack_system.gd" type="Script" id="7_hack_system"]
+[ext_resource path="res://scenes/npc/Guard.tscn" type="PackedScene" id="8_guard"]
+[ext_resource path="res://scenes/ui/EvidencePanel.tscn" type="PackedScene" id="9_evidence_panel"]
+[ext_resource path="res://scripts/missions/mission_manager.gd" type="Script" id="10_mission_manager"]
+[ext_resource path="res://scripts/missions/checkpoint_manager.gd" type="Script" id="11_checkpoint_manager"]
+[ext_resource path="res://scripts/gameplay/exit_zone.gd" type="Script" id="12_exit_zone"]
+[ext_resource path="res://scripts/gameplay/ending_manager.gd" type="Script" id="13_ending_manager"]
+[ext_resource path="res://scripts/gameplay/failure_manager.gd" type="Script" id="14_failure_manager"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_floor"]
+size = Vector3(24, 0.2, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape_floor"]
+size = Vector3(24, 0.2, 24)
+
+[sub_resource type="StandardMaterial3D" id="Material_floor"]
+albedo_color = Color(0.035, 0.06, 0.08, 1)
+metallic = 0.2
+roughness = 0.75
+
+[sub_resource type="BoxMesh" id="BoxMesh_wall"]
+size = Vector3(24, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape_wall"]
+size = Vector3(24, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape_exit"]
+size = Vector3(3.5, 2.5, 1.0)
+
+[sub_resource type="Environment" id="Environment_world"]
+background_mode = 1
+background_color = Color(0.008, 0.012, 0.025, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.15, 0.24, 0.34, 1)
+ambient_light_energy = 0.8
+tonemap_mode = 2
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_game")
+
+[node name="SecurityManager" type="Node" parent="."]
+script = ExtResource("2_security")
+
+[node name="EvidenceManager" type="Node" parent="."]
+script = ExtResource("3_evidence")
+
+[node name="HackSystem" type="Node" parent="."]
+script = ExtResource("7_hack_system")
+
+[node name="MissionManager" type="Node" parent="."]
+script = ExtResource("10_mission_manager")
+
+[node name="CheckpointManager" type="Node" parent="."]
+script = ExtResource("11_checkpoint_manager")
+
+[node name="EndingManager" type="Node" parent="."]
+script = ExtResource("13_ending_manager")
+
+[node name="FailureManager" type="Node" parent="."]
+script = ExtResource("14_failure_manager")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Environment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_world")
+
+[node name="Floor" type="StaticBody3D" parent="World"]
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Floor"]
+mesh = SubResource("BoxMesh_floor")
+material_override = SubResource("Material_floor")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Floor"]
+shape = SubResource("BoxShape_floor")
+
+[node name="NorthWall" type="StaticBody3D" parent="World"]
+position = Vector3(0, 1.5, -12)
+
+[node name="Mesh" type="MeshInstance3D" parent="World/NorthWall"]
+mesh = SubResource("BoxMesh_wall")
+material_override = SubResource("Material_floor")
+
+[node name="Collision" type="CollisionShape3D" parent="World/NorthWall"]
+shape = SubResource("BoxShape_wall")
+
+[node name="Door" parent="World" instance=ExtResource("5_door")]
+position = Vector3(2.2, 0.0, 0.0)
+
+[node name="Terminal" parent="World" instance=ExtResource("6_terminal")]
+position = Vector3(-2.6, 0.0, -1.0)
+
+[node name="EvidencePickup" type="Node3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0.5, 0.0)
+
+[node name="Guard" parent="World" instance=ExtResource("8_guard")]
+position = Vector3(0, 0, -2.5)
+
+[node name="ExitZone" type="Area3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 8.5)
+script = ExtResource("12_exit_zone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/ExitZone"]
+shape = SubResource("BoxShape_exit")
+
+[node name="Player" parent="." instance=ExtResource("4_player")]
+position = Vector3(0, 0, 4)
+
+[node name="MissionRoot" type="Node" parent="."]
+[node name="SecurityRoot" type="Node" parent="."]
+[node name="AudioRoot" type="Node" parent="."]
+[node name="VFXRoot" type="Node" parent="."]
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="FoundationLabel" type="Label" parent="UILayer"]
+offset_left = 32.0
+offset_top = 32.0
+theme_override_colors/font_color = Color(0.2, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "NEON//TRACE: DHAKA 2047\nPLAYER FOUNDATION ONLINE\nWASD MOVE  |  SHIFT SPRINT  |  CTRL CROUCH  |  SPACE JUMP"
+
+[node name="InteractionPrompt" type="Label" parent="UILayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -70.0
+offset_right = 160.0
+offset_bottom = -30.0
+text = ""
+visible = false
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.7, 0.96, 1, 1)
+
+[node name="MissionStatus" type="Label" parent="UILayer"]
+offset_left = 32.0
+offset_top = 90.0
+offset_right = 440.0
+offset_bottom = 170.0
+autowrap_mode = 3
+text = "MISSION: STANDBY"
+theme_override_colors/font_color = Color(0.76, 0.92, 1.0, 1)
+
+[node name="StatusLog" type="RichTextLabel" parent="UILayer"]
+offset_left = 860.0
+offset_top = 32.0
+offset_right = 1248.0
+offset_bottom = 250.0
+bbcode_enabled = true
+fit_content = false
+scroll_following = true
+text = "SYSTEM // ONLINE"
+
+[node name="EndingStatus" type="Label" parent="UILayer"]
+offset_left = 860.0
+offset_top = 270.0
+offset_right = 1248.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0.95, 0.75, 1, 1)
+text = "ENDING: UNKNOWN"
+
+[node name="FailureStatus" type="Label" parent="UILayer"]
+offset_left = 860.0
+offset_top = 340.0
+offset_right = 1248.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(1, 0.52, 0.52, 1)
+text = "FAILURE: STANDBY"
+
+[node name="ScannerOverlay" type="Label" parent="UILayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -120.0
+offset_right = 220.0
+offset_bottom = -80.0
+text = "SCANNER OFF"
+visible = false
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.4, 0.9, 1.0, 1)
+
+[node name="EvidencePanel" parent="UILayer" instance=ExtResource("9_evidence_panel")]
+position = Vector2(0, 0)

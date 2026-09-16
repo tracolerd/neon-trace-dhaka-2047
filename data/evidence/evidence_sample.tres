@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/evidence/evidence_entry.gd" id="1_evidence_entry"]
+
+[resource]
+script = ExtResource("1_evidence_entry")
+id = "oracle_file_01"
+title = "Oracle Fragment"
+description = "A partially recovered message referencing a hidden city-wide control lattice."
+category = "FILE"
+source = "Recovered from a local node"
+mission_id = "00_ghost_signal"
+importance = 2
+discovery_location = "OldDhaka service tunnel"
+tags = ["oracle", "network", "trace"]

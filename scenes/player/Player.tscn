@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource path="res://scripts/player/player_controller.gd" type="Script" id="1_controller"]
+[ext_resource path="res://scripts/player/player_state.gd" type="Script" id="2_state"]
+[ext_resource path="res://scripts/player/player_camera.gd" type="Script" id="3_camera"]
+[ext_resource path="res://scripts/interaction/interaction_component.gd" type="Script" id="4_interaction"]
+[ext_resource path="res://scripts/player/player_interaction.gd" type="Script" id="5_player_interaction"]
+[ext_resource path="res://scripts/player/player_scanner.gd" type="Script" id="6_scanner"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape_player"]
+radius = 0.38
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_player"]
+radius = 0.38
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="Material_player"]
+albedo_color = Color(0.04, 0.45, 0.55, 1)
+metallic = 0.35
+roughness = 0.42
+
+[sub_resource type="Environment" id="Environment_player"]
+background_mode = 1
+background_color = Color(0.015, 0.02, 0.035, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.2, 0.32, 0.4, 1)
+ambient_light_energy = 0.7
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_controller")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("CapsuleShape_player")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+
+[node name="PlayerModel" type="MeshInstance3D" parent="VisualRoot"]
+position = Vector3(0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_player")
+material_override = SubResource("Material_player")
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("3_camera")
+target_path = NodePath("..")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraRig"]
+collision_mask = 1
+spring_length = 5.5
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/SpringArm3D"]
+current = true
+fov = 70.0
+
+[node name="InteractionOrigin" type="Marker3D" parent="."]
+position = Vector3(0, 1.2, -0.5)
+
+[node name="ScannerOrigin" type="Marker3D" parent="."]
+position = Vector3(0, 1.2, -0.5)
+
+[node name="Audio" type="Node3D" parent="."]
+
+[node name="VFX" type="Node3D" parent="."]
+
+[node name="Components" type="Node" parent="."]
+
+[node name="PlayerState" type="Node" parent="Components"]
+script = ExtResource("2_state")
+
+[node name="InteractionComponent" type="Node" parent="Components"]
+script = ExtResource("4_interaction")
+
+[node name="PlayerInteraction" type="Node" parent="Components"]
+script = ExtResource("5_player_interaction")
+
+[node name="PlayerScanner" type="Node" parent="Components"]
+script = ExtResource("6_scanner")

@@ -1,0 +1,84 @@
+[gd_scene format=3]
+
+[node name="HackingInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.04, 0.08, 0.8)
+
+[node name="Header" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 480.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.3, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "HACKING SESSION"
+
+[node name="TargetInfo" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 360.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0.9, 0.96, 1, 1)
+text = "TARGET: //\nTYPE: //\nLEVEL: //"
+
+[node name="NetworkView" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 96.0
+offset_right = 840.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0.35, 0.9, 1, 1)
+text = "NODE://ACCESS\nSIGNAL://STABLE\nGATE://OPEN"
+
+[node name="PuzzleArea" type="RichTextLabel" parent="Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 220.0
+offset_right = 1180.0
+offset_bottom = 520.0
+bbcode_enabled = true
+text = "[center]Signal Alignment\n\nAlign the signal chain to restore network access.[/center]"
+fit_content = true
+
+[node name="Timer" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 24.0
+offset_right = 1180.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.62, 0.4, 1)
+horizontal_alignment = 2
+text = "TIME: 30.0"
+
+[node name="Status" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 560.0
+offset_right = 620.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0.75, 0.95, 1, 1)
+text = "STATUS: ACTIVE"
+
+[node name="ExitHint" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 560.0
+offset_right = 1180.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0.8, 0.85, 1, 1)
+horizontal_alignment = 2
+text = "[Esc] EXIT"
