@@ -166,27 +166,27 @@ This structure keeps major systems independently testable and replaceable as the
 A validated Android debug export was produced from the project using **Godot 4.7.2**.
 
 ```text
-Artifact: NEON_TRACE_DHAKA_2047.apk
+Artifact: NEON_TRACE_DHAKA_2047_compatible.apk
 ABI:      arm64-v8a
 Size:     31,493,639 bytes
-SHA-256:  62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE
+SHA-256:  3C62FDE307A650A164579DB8BAB76E78EE035B91488B97C682D368079754DCC1
 ```
 
 The local `builds/android/` output directory is intentionally ignored by Git, but the verified APK
 is publicly downloadable from the
-[v0.1.0 Android debug release](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/tag/v0.1.0-android-debug).
+[v0.1.1 Android compatible release](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/tag/v0.1.1-android-compatible).
 
 ### Reproduce the build
 
 ```bash
 Godot_v4.7.2-stable_win64_console.exe --headless --path . --editor --quit
-Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-debug "Android Debug" builds/android/NEON_TRACE_DHAKA_2047.apk
+Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-debug "Android Debug" builds/android/NEON_TRACE_DHAKA_2047_compatible.apk
 ```
 
 Install on an arm64 Android device with USB debugging enabled:
 
 ```bash
-adb install -r builds/android/NEON_TRACE_DHAKA_2047.apk
+adb install -r builds/android/NEON_TRACE_DHAKA_2047_compatible.apk
 ```
 
 ---
@@ -212,13 +212,13 @@ The configured main scene is the project's boot scene. fileciteturn5file0�
 
 ## Export
 
-The repository includes Godot 4.7.2 Android export configuration. A verified arm64-v8a debug APK
-is available from the public release:
+The repository includes Godot 4.7.2 Android export configuration. A signed, verified dual-ABI
+debug APK is available from the public release:
 
-[Download the Android debug APK](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/download/v0.1.0-android-debug/NEON_TRACE_DHAKA_2047.apk)
+[Download the Android compatible debug APK](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/download/v0.1.1-android-compatible/NEON_TRACE_DHAKA_2047_compatible.apk)
 
-Artifact details: `31,493,639` bytes, SHA-256
-`62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE`.
+Artifact details: `60,816,874` bytes, ABIs `arm64-v8a` and `armeabi-v7a`, SHA-256
+`3C62FDE307A650A164579DB8BAB76E78EE035B91488B97C682D368079754DCC1`.
 
 From Godot:
 ```text
