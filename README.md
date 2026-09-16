@@ -1,88 +1,113 @@
-# NEON//TRACE: DHAKA 2047
+<div align="center">
 
-> **A third-person 3D cyber-investigation thriller set in a fictionalized Dhaka, 2047.**
->
-> Observe. Infiltrate. Hack. Collect evidence. Escape.
+# ◈ NEON//TRACE: DHAKA 2047
 
-NEON//TRACE: DHAKA 2047 is a narrative-driven stealth and investigation prototype built around a dense cyberpunk vision of future Dhaka. The player investigates a hidden city-wide control system by combining environmental observation, stealth, hacking, evidence collection, security-system manipulation, and branching mission outcomes.
+### *Investigate the signal. Survive the system.*
 
----
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=00F5FF&center=true&vCenter=true&width=620&lines=Observe.+Infiltrate.+Hack.+Escape.;A+cyber-investigation+thriller+set+in+Dhaka+2047.;Stealth+%7C+Hacking+%7C+Evidence+%7C+Security+AI" alt="Animated project tagline" />
 
-## Overview
+<p>
+  <img src="https://img.shields.io/badge/ENGINE-Godot%204.x-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot 4.x" />
+  <img src="https://img.shields.io/badge/LANGUAGE-GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="GDScript" />
+  <img src="https://img.shields.io/badge/GENRE-Stealth%20%2B%20Investigation-111827?style=for-the-badge" alt="Stealth and investigation" />
+  <img src="https://img.shields.io/badge/STATUS-Vertical%20Slice-00B8D4?style=for-the-badge" alt="Vertical slice" />
+</p>
 
-The project is designed as a focused **vertical-slice foundation** rather than a full campaign. Its core gameplay loop connects player movement, interaction, scanning, hacking, security AI, evidence, objectives, mission state, fail states, and ending resolution into one coherent prototype experience.
-
-### Core pillars
-
-| Pillar | Description |
-| --- | --- |
-| **Investigation** | Discover terminals, evidence, environmental clues, and mission-critical information. |
-| **Stealth** | Avoid detection, manage proximity, and respond to escalating security states. |
-| **Hacking** | Interact with terminals through a lightweight, extensible hacking framework. |
-| **Systems** | Use scanner feedback, security behavior, and environmental interactions to progress. |
-| **Narrative** | Mission state, story flags, fail states, and ending resolution support branching outcomes. |
+</div>
 
 ---
 
-## Current Status
+## ◈ The Premise
 
-**Playable prototype foundation / vertical-slice development**
+**NEON//TRACE: DHAKA 2047** is a third-person 3D cyber-investigation thriller set in a fictionalized near-future Dhaka.
 
-Implemented systems currently include:
+You are not here to simply shoot your way through a level. You are here to **observe, infiltrate, manipulate systems, collect evidence, and get out alive** while uncovering a hidden city-wide control network.
 
-- Boot flow and project configuration
-- Player movement with acceleration, deceleration, gravity, jumping, sprinting, and crouching
-- Third-person spring-arm camera
-- Proximity + raycast interaction system
+The project is currently focused on a **playable vertical-slice foundation**: the core gameplay systems are being connected into one coherent mission before the world expands into a larger campaign.
+
+---
+
+## ◈ Gameplay Pillars
+
+<table>
+<tr>
+<td width="20%" align="center"><b>INVESTIGATION</b><br/><sub>Find clues. Read the environment. Build the case.</sub></td>
+<td width="20%" align="center"><b>STEALTH</b><br/><sub>Stay hidden. Manage proximity. Control exposure.</sub></td>
+<td width="20%" align="center"><b>HACKING</b><br/><sub>Access terminals and manipulate connected systems.</sub></td>
+<td width="20%" align="center"><b>SECURITY</b><br/><sub>React to escalating patrol and detection states.</sub></td>
+<td width="20%" align="center"><b>NARRATIVE</b><br/><sub>Mission flags, fail states and outcome resolution.</sub></td>
+</tr>
+</table>
+
+---
+
+## ◈ Core Gameplay Loop
+
+```text
+┌──────────────────────┐
+│     START MISSION    │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│      EXPLORE         │
+│   Observe + Scan     │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ INVESTIGATE SYSTEMS  │
+│ Evidence + Terminals │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│    MANAGE THREAT     │
+│  Stealth + Security  │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│     COMPLETE GOAL    │
+│   Extraction / Exit  │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│    RESOLVE OUTCOME   │
+└──────────────────────┘
+```
+
+---
+
+## ◈ Current Prototype
+
+The repository currently contains the foundation for:
+
+- Boot flow and core services
+- Third-person player controller
+- Acceleration, deceleration, gravity, jump, sprint and crouch states
+- Spring-arm third-person camera
+- Proximity + raycast interaction
 - Doors and terminal interactables
-- Scanner toggle and nearby-object highlighting
-- Hacking system foundation with puzzle/challenge support and terminal integration
-- Security manager with escalating intensity states
+- Scanner system with nearby-object highlighting
+- Hacking framework and terminal challenge flow
+- Security manager with escalating intensity
 - Guard patrol and detection foundations
 - Drone and navigation controller placeholders
-- Evidence resources, database, pickup flow, and evidence UI foundation
-- Mission, objective, checkpoint, and progression management
-- Reactive objective completion through evidence and terminal events
-- Mission event log and narrative status feed
+- Evidence resources, database and pickup flow
+- Evidence UI foundation
+- Mission, objective and checkpoint management
+- Reactive objectives driven by gameplay events
+- Mission event logging and narrative status feed
 - Save/load continuity for mission and story state
 - Stealth fail-state escalation and story flags
 - Branching ending-resolution framework
-- Exit-zone based extraction objective for a complete prototype loop
+- Exit-zone extraction objective
 
-The active implementation record is maintained in [`docs/PROGRESS.md`](docs/PROGRESS.md). citeturn2file0
-
----
-
-## Gameplay Loop
-
-The intended prototype flow is:
-
-```text
-Start Mission
-     ↓
-Explore the Environment
-     ↓
-Scan & Interact
-     ↓
-Collect Evidence / Hack Systems
-     ↓
-Manage Security & Avoid Detection
-     ↓
-Complete Objectives
-     ↓
-Reach Extraction
-     ↓
-Resolve Mission Outcome
-```
-
-The prototype is intentionally structured so that individual systems can evolve into a larger stealth-investigation game without tightly coupling all gameplay logic together.
+> **Development focus:** finish and validate the stealth-and-extraction vertical slice before significantly expanding campaign content.
 
 ---
 
-## Controls
+## ◈ Controls
 
-| Action | Input |
-| --- | --- |
+| Action | Key |
+|:--|:--:|
 | Move | `W` `A` `S` `D` |
 | Sprint | `Shift` |
 | Crouch | `Ctrl` |
@@ -91,141 +116,161 @@ The prototype is intentionally structured so that individual systems can evolve 
 | Scanner | `Q` |
 | Inventory | `Tab` |
 | Pause | `Esc` |
-| Camera | Arrow Keys |
-
-Input actions are defined in the Godot project configuration. fileciteturn5file0
+| Camera | `Arrow Keys` |
 
 ---
 
-## Technical Stack
+## ◈ Technical Architecture
 
-- **Engine:** Godot 4.x
-- **Language:** GDScript
-- **Rendering:** GL Compatibility renderer
-- **Perspective:** Third-person 3D
-- **Target Resolution:** 1280 × 720 prototype viewport
-- **Architecture:** Modular, data-driven, signal-based systems
-- **Persistence:** Versioned save/load boundary with validation
-
-The project configuration currently targets Godot 4.x and defines the core autoload services, rendering mode, viewport, and input map. fileciteturn5file0
-
----
-
-## Architecture
-
-The codebase is organized around focused system boundaries instead of one monolithic gameplay controller.
+The project follows a **modular, data-driven, signal-based architecture** rather than concentrating gameplay logic inside a single controller.
 
 ```text
-NEON//TRACE
-├── assets/        # Game assets and supporting resources
-├── data/          # Data-driven gameplay definitions
-├── docs/          # Development and progress documentation
-├── scenes/        # Godot scenes and gameplay composition
-├── scripts/       # Core gameplay, services, UI, AI, and systems
-├── project.godot  # Project configuration and input mapping
-├── CHANGELOG.md   # Project change history
-└── LICENSE        # Project license
+NEON//TRACE: DHAKA 2047
+│
+├── assets/             → Visual and supporting assets
+├── data/               → Data-driven gameplay definitions
+├── docs/               → Architecture, testing and development records
+├── scenes/             → Godot scene composition
+├── scripts/            → Core systems, gameplay, UI, AI and services
+├── project.godot       → Engine configuration and input map
+├── export_presets.cfg  → Platform export configuration
+├── CHANGELOG.md        → Project change history
+└── LICENSE             → License terms
 ```
 
-Core services are exposed through Godot autoloads, including event routing, game state, settings, saving, scene transitions, and audio management. fileciteturn5file0
+### Core service boundaries
 
-The development guidelines emphasize focused, data-driven, signal-based systems and milestone-oriented development. fileciteturn3file0
+`EventBus` · `GameManager` · `SettingsManager` · `SaveManager` · `SceneManager` · `AudioManager`
 
----
-
-## Development Roadmap
-
-The project follows a milestone-based development order:
-
-1. Project Bootstrap
-2. Core Services
-3. Player
-4. Interaction
-5. Scanner
-6. Hacking
-7. Security & AI
-8. Evidence System
-9. Mission Framework
-10. Vertical Slice
-11. Hub, Content & Polish
-12. Release Preparation
-
-The current priority is completing and validating the **stealth-and-extraction vertical slice** before expanding into larger campaign content. fileciteturn2file0
+This structure keeps major systems independently testable and replaceable as the project grows.
 
 ---
 
-## Running Locally
+## ◈ Tech Stack
+
+| Layer | Technology |
+|:--|:--|
+| Engine | **Godot 4.x** |
+| Language | **GDScript** |
+| Rendering | **GL Compatibility** |
+| Game Type | **Third-person 3D** |
+| Prototype Viewport | **1280 × 720** |
+| Architecture | **Modular / Data-driven / Signal-based** |
+| Persistence | **Validated save/load boundary** |
+| Android Target | **arm64-v8a debug export** |
+
+---
+
+## ◈ Android Build
+
+A validated Android debug export was produced from the project using **Godot 4.7.2**.
+
+```text
+Artifact: NEON_TRACE_DHAKA_2047.apk
+ABI:      arm64-v8a
+Size:     31,493,639 bytes
+SHA-256:  62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE
+```
+
+The APK was generated successfully, but the `builds/android/` output directory is intentionally ignored by Git. The repository therefore does **not currently contain a downloadable APK blob**; the values above document the validated local build artifact.
+
+### Reproduce the build
+
+```bash
+Godot_v4.7.2-stable_win64_console.exe --headless --path . --editor --quit
+Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-debug "Android Debug" builds/android/NEON_TRACE_DHAKA_2047.apk
+```
+
+Install on an arm64 Android device with USB debugging enabled:
+
+```bash
+adb install -r builds/android/NEON_TRACE_DHAKA_2047.apk
+```
+
+---
+
+## ◈ Run Locally
 
 ### Requirements
 
-- **Godot 4.x**
-- A desktop environment capable of running the Godot editor and a 3D project
+- Godot 4.x
+- A desktop environment capable of running a Godot 3D project
 
 ### Launch
 
-1. Clone the repository.
-2. Open Godot.
-3. Select **Import** / **Open Project**.
-4. Choose `project.godot` from the repository root.
-5. Press **F6/F5** as appropriate, or use **Run Project** from the editor.
-
-The configured main scene is the project's boot scene. fileciteturn5file0
-
----
-
-## Export
-
-The repository includes export configuration for desktop and web targets.
-
-From Godot:
-
 ```text
-Project → Export
+1. Clone the repository
+2. Open Godot
+3. Import / Open Project
+4. Select project.godot
+5. Run the project
 ```
 
-Select the desired preset, configure the output path, and export the project for the target platform.
+The configured entry scene is `scenes/boot/Boot.tscn`.
 
 ---
 
-## Documentation
+## ◈ Development Roadmap
+
+```text
+[✓] Project Bootstrap
+[✓] Core Services
+[✓] Player Foundation
+[✓] Interaction
+[✓] Scanner
+[✓] Hacking Foundation
+[✓] Security & AI Foundation
+[✓] Evidence System Foundation
+[✓] Mission Framework
+[→] Stealth + Extraction Vertical Slice
+[ ] Hub + World Content
+[ ] Narrative Expansion
+[ ] Visual Polish
+[ ] Release Preparation
+```
+
+The project is deliberately being developed milestone-by-milestone so the core loop stays testable before the scope expands.
+
+---
+
+## ◈ Documentation
 
 | Document | Purpose |
-| --- | --- |
-| [`docs/PROGRESS.md`](docs/PROGRESS.md) | Current implementation progress and next milestone |
-| [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) | Development conventions and architectural guidelines |
-| [`CHANGELOG.md`](CHANGELOG.md) | Project change history |
-| [`LICENSE`](LICENSE) | License terms |
+|:--|:--|
+| [`docs/PROGRESS.md`](docs/PROGRESS.md) | Implementation progress and active milestone |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System and architecture notes |
+| [`docs/GAME_DESIGN.md`](docs/GAME_DESIGN.md) | Gameplay design notes |
+| [`docs/CONTROLS.md`](docs/CONTROLS.md) | Input and control reference |
+| [`docs/BUILD.md`](docs/BUILD.md) | Build and export instructions |
+| [`docs/TESTING.md`](docs/TESTING.md) | Validation and testing records |
+| [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) | Development conventions |
+| [`CHANGELOG.md`](CHANGELOG.md) | Change history |
 
 ---
 
-## Design Direction
+## ◈ Design Direction
 
-**NEON//TRACE: DHAKA 2047** is built around a fictionalized near-future Dhaka where surveillance, infrastructure, data, and urban systems intersect.
+Dhaka is not just a backdrop.
 
-The design goal is to make the city itself part of the investigation: security networks, terminals, evidence, patrol routes, and environmental interactions should feel like connected parts of one living system rather than isolated game mechanics.
+The long-term design direction treats the city as part of the investigation itself: **surveillance infrastructure, terminals, evidence, patrol routes, urban systems and environmental interactions should feel interconnected.**
 
-The project deliberately prioritizes a strong, testable vertical slice before broadening the world, campaign content, or visual scope.
+The aesthetic target is a dense, atmospheric, technologically saturated future city where information is as important as firepower.
 
 ---
 
-## Project Philosophy
+## ◈ Project Philosophy
 
 > **Build the systems first. Then build the city around them.**
 
-The repository follows a modular approach so gameplay features can be tested, extended, and replaced independently as development progresses.
-
----
-
-## License
-
-See [`LICENSE`](LICENSE) for the applicable license terms.
+NEON//TRACE is intentionally structured so individual gameplay systems can evolve without forcing the entire project into a monolithic architecture.
 
 ---
 
 <div align="center">
 
-**NEON//TRACE: DHAKA 2047**
+### ◈ INVESTIGATE THE SIGNAL ◈
+### **SURVIVE THE SYSTEM**
 
-*Investigate the signal. Survive the system.*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F5FF,100:5B21B6&height=100&section=footer" alt="Animated footer" />
 
 </div>
