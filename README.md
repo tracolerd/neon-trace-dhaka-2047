@@ -4,13 +4,19 @@
 
 ### *Investigate the signal. Survive the system.*
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=00F5FF&center=true&vCenter=true&width=620&lines=Observe.+Infiltrate.+Hack.+Escape.;A+cyber-investigation+thriller+set+in+Dhaka+2047.;Stealth+%7C+Hacking+%7C+Evidence+%7C+Security+AI" alt="Animated project tagline" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=00F5FF&center=true&vCenter=true&width=650&lines=Observe.+Infiltrate.+Hack.+Escape.;A+cyber-investigation+thriller+set+in+Dhaka+2047.;Stealth+%7C+Hacking+%7C+Evidence+%7C+Security+AI" alt="Animated project tagline" />
 
 <p>
   <img src="https://img.shields.io/badge/ENGINE-Godot%204.x-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot 4.x" />
   <img src="https://img.shields.io/badge/LANGUAGE-GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="GDScript" />
   <img src="https://img.shields.io/badge/GENRE-Stealth%20%2B%20Investigation-111827?style=for-the-badge" alt="Stealth and investigation" />
   <img src="https://img.shields.io/badge/STATUS-Vertical%20Slice-00B8D4?style=for-the-badge" alt="Vertical slice" />
+</p>
+
+<p>
+  <a href="https://github.com/tracolerd/neon-trace-dhaka-2047/releases/tag/v0.1.0-android-debug"><strong>↓ Download Android APK</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/tracolerd/neon-trace-dhaka-2047/releases"><strong>View Releases</strong></a>
 </p>
 
 </div>
@@ -158,18 +164,27 @@ NEON//TRACE: DHAKA 2047
 
 ---
 
-## ◈ Android Build
+## ◈ Android Release
 
-A validated Android debug export was produced from the project using **Godot 4.7.2**.
+An **Android debug build is now published as a GitHub Release asset** rather than committed into the source tree.
 
-```text
-Artifact: NEON_TRACE_DHAKA_2047.apk
-ABI:      arm64-v8a
-Size:     31,493,639 bytes
-SHA-256:  62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE
-```
+### Latest Android build
 
-The build output is intentionally ignored by Git, so the repository currently does **not** contain a downloadable APK blob. The values above document the validated local artifact.
+| Property | Value |
+|:--|:--|
+| Release | `v0.1.0-android-debug` |
+| Artifact | `NEON_TRACE_DHAKA_2047.apk` |
+| Engine | **Godot 4.7.2** |
+| Orientation | **Landscape** |
+| ABI | **arm64-v8a** |
+| Size | **31,493,639 bytes** |
+| SHA-256 | `62C7CE927F4E5CB37D0ACAE80847EB2AC926493ABFC2360B31D6F1685BBC7BBE` |
+
+### Download
+
+**[Download NEON_TRACE_DHAKA_2047.apk](https://github.com/tracolerd/neon-trace-dhaka-2047/releases/download/v0.1.0-android-debug/NEON_TRACE_DHAKA_2047.apk)**
+
+> The APK is a **debug build**. Device runtime installation was not performed during export validation because no Android device was connected to `adb`.
 
 ### Reproduce the build
 
@@ -177,6 +192,8 @@ The build output is intentionally ignored by Git, so the repository currently do
 Godot_v4.7.2-stable_win64_console.exe --headless --path . --editor --quit
 Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-debug "Android Debug" builds/android/NEON_TRACE_DHAKA_2047.apk
 ```
+
+The Android export configuration and validation notes are maintained on the `tracolerd-developer-info-android-export` branch in [`docs/BUILD.md`](https://github.com/tracolerd/neon-trace-dhaka-2047/blob/tracolerd-developer-info-android-export/docs/BUILD.md).
 
 ---
 
