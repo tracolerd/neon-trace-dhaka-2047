@@ -4,7 +4,7 @@
 
 | ID | Title | Expected Result | Status |
 |---|---|---|---|
-| BOOT-001 | Boot loads core scene | Boot validates input and transitions to Game | NOT VERIFIED — Godot 4.x unavailable |
+| BOOT-001 | Boot loads core scene | Boot validates input and transitions to Game | PARSED — Godot 4.7.2 headless validation |
 | SAVE-001 | Invalid save is rejected | Invalid JSON/version does not replace defaults | NOT VERIFIED — Godot 4.x unavailable |
 | SET-001 | Settings persist | Known settings save and reload from user config | NOT VERIFIED — Godot 4.x unavailable |
 | AUDIO-001 | Audio buses initialize | Required buses exist at runtime | NOT VERIFIED — Godot 4.x unavailable |
@@ -28,4 +28,4 @@
 | EVIDENCE-002 | Evidence list | Evidence panel receives known evidence entries | NOT VERIFIED — Godot 4.x unavailable |
 | EVIDENCE-003 | Evidence scan | Scanner reveals evidence category and metadata | NOT VERIFIED — Godot 4.x unavailable |
 
-Runtime testing is not yet verified because Godot 4.x is unavailable in the current environment.
+Headless project validation and Windows Desktop export are verified with Godot 4.7.2. Interactive gameplay cases remain manual test work for the vertical-slice milestone.

@@ -51,7 +51,7 @@ func _find_best_target() -> Node:
 		var distance := player.global_position.distance_to(candidate.global_position)
 		if distance > max_distance + 1.5:
 			continue
-		var priority := candidate.get_interaction_priority()
+		var priority: float = float(candidate.get_interaction_priority())
 		if ray_hit != null and (candidate == ray_hit or ray_hit.is_ancestor_of(candidate) or candidate.is_ancestor_of(ray_hit)):
 			priority += 50.0
 		if priority > best_priority:

@@ -40,8 +40,8 @@ func _refresh_scan_state() -> void:
 				_set_highlight(current_highlight, false)
 				_set_highlight(target, true)
 				current_highlight = target
-			var category := target.get_scan_category() if target.has_method("get_scan_category") else "INTERACTABLE"
-			var details := target.get_scan_details() if target.has_method("get_scan_details") else target.name
+			var category: String = str(target.get_scan_category()) if target.has_method("get_scan_category") else "INTERACTABLE"
+			var details: String = str(target.get_scan_details()) if target.has_method("get_scan_details") else target.name
 			summary = "%s // %s" % [category, details]
 		else:
 			_set_highlight(current_highlight, false)

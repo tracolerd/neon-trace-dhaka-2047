@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 			if detection_level > 0.6:
 				state_name = "ALERT"
 				awareness_state = "ALERT"
-				var direction := (player.global_position - global_position)
+				var direction: Vector3 = player.global_position - global_position
 				if direction.length() > 0.1:
 					velocity = direction.normalized() * 2.8
 					move_and_slide()

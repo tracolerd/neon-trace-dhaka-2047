@@ -51,7 +51,7 @@ func add_objective(objective: Dictionary) -> void:
 	if active_mission == null:
 		objective_manager.register_objective(objective)
 		return
-	var objective_id := objective.get("id", "")
+	var objective_id: String = str(objective.get("id", ""))
 	if objective_id.is_empty():
 		return
 	active_mission.register_objective(objective_id)
@@ -102,7 +102,7 @@ func get_active_mission_state() -> Dictionary:
 func _on_evidence_discovered(evidence_id: String) -> void:
 	if active_mission == null:
 		return
-	var alias := _objective_aliases.get("evidence_discovered")
+	var alias: String = str(_objective_aliases.get("evidence_discovered", ""))
 	if alias != null and not alias.is_empty():
 		complete_objective(alias)
 	if evidence_id != "":
@@ -111,7 +111,7 @@ func _on_evidence_discovered(evidence_id: String) -> void:
 func _on_player_action(action_name: String, payload: Dictionary) -> void:
 	if active_mission == null:
 		return
-	var alias := _objective_aliases.get(action_name)
+	var alias: String = str(_objective_aliases.get(action_name, ""))
 	if alias != null and not alias.is_empty():
 		complete_objective(alias)
 	if action_name == "terminal_hacked":

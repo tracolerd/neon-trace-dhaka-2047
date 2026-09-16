@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource path="res://scripts/ai/guard_controller.gd" type="Script" id="1_guard"]
 
@@ -11,6 +11,10 @@ albedo_color = Color(0.8, 0.2, 0.28, 1)
 metallic = 0.2
 roughness = 0.6
 
+[sub_resource type="CapsuleShape3D" id="GuardCollision"]
+radius = 0.34
+height = 1.6
+
 [node name="Guard" type="CharacterBody3D"]
 script = ExtResource("1_guard")
 patrol_points = [Vector3(0, 0, 0), Vector3(6, 0, 0)]
@@ -21,6 +25,4 @@ mesh = SubResource("GuardMesh")
 material_override = SubResource("GuardMaterial")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = CapsuleShape3D.new()
-shape.radius = 0.34
-shape.height = 1.6
+shape = SubResource("GuardCollision")

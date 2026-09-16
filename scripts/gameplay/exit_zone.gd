@@ -24,7 +24,7 @@ func _on_body_entered(body: Node3D) -> void:
 		if not objective_data.get("completed", false):
 			EventBus.notification_requested.emit("Exit denied: %s not yet complete" % objective_name, "warning")
 			return
-	var result := manager.complete_objective(objective_id)
+	var result: bool = manager.complete_objective(objective_id)
 	if result:
 		var checkpoint = get_tree().root.get_node_or_null("Game/CheckpointManager")
 		if checkpoint != null and checkpoint.has_method("trigger"):
