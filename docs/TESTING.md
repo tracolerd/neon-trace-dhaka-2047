@@ -27,8 +27,8 @@
 | EVIDENCE-001 | Evidence register | Pickup adds evidence to manager with discovered ID | NOT VERIFIED — Godot 4.x unavailable |
 | EVIDENCE-002 | Evidence list | Evidence panel receives known evidence entries | NOT VERIFIED — Godot 4.x unavailable |
 | EVIDENCE-003 | Evidence scan | Scanner reveals evidence category and metadata | NOT VERIFIED — Godot 4.x unavailable |
-| UI-DEV-001 | Developer Info entry | Pause menu opens Developer Info and keyboard focus lands on a link | NOT VERIFIED — Godot CLI unavailable |
-| UI-DEV-002 | Developer links | Each link opens through the OS browser; failures show an error message | NOT VERIFIED — Godot CLI unavailable |
-| ANDROID-001 | Android debug export | `Android Debug` preset produces an arm64-v8a APK | BLOCKED — Godot CLI unavailable |
+| UI-DEV-001 | Developer Info entry | Pause menu opens Developer Info and keyboard focus lands on a link | STATICALLY VERIFIED; runtime UI not exercised |
+| UI-DEV-002 | Developer links | Each link opens through the OS browser; failures show an error message | STATICALLY VERIFIED; runtime UI not exercised |
+| ANDROID-001 | Android debug export | `Android Debug` preset produces an arm64-v8a APK | PASS — `builds/android/NEON_TRACE_DHAKA_2047.apk` |
 
-Runtime testing is not yet verified because Godot 4.x is unavailable in the current environment.
+Runtime/device testing remains outstanding because no Android device was connected to `adb`.
