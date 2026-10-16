@@ -262,6 +262,14 @@ The long-term design direction treats the city as part of the investigation itse
 
 ---
 
+---
+
+## Author & Development
+
+**Project author and solo developer:** [Nurul Faiyaz](https://github.com/tracolerd).
+
+NEON//TRACE is independently developed and maintained by Nurul Faiyaz. AI-assisted tools may be used in the workflow; the author remains responsible for design choices, code review, validation, and project maintenance.
+
 ## ◈ Project Philosophy
 
 > **Build the systems first. Then build the city around them.**
@@ -278,11 +286,3 @@ NEON//TRACE is intentionally structured so individual gameplay systems can evolv
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F5FF,100:5B21B6&height=100&section=footer" alt="Animated footer" />
 
 </div>
-
----
-
-## Author & Development
-
-**Project author and solo developer:** [Nurul Faiyaz](https://github.com/tracolerd).
-
-NEON//TRACE is independently developed and maintained by Nurul Faiyaz. AI-assisted tools may be used in the workflow; the author remains responsible for design choices, code review, validation, and project maintenance.
