@@ -1,28 +1,30 @@
-<div align="center">
-
-# ◈ NEON//TRACE: DHAKA 2047
-
-### *Investigate the signal. Survive the system.*
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=00F5FF&center=true&vCenter=true&width=650&lines=Observe.+Infiltrate.+Hack.+Escape.;A+cyber-investigation+thriller+set+in+Dhaka+2047.;Stealth+%7C+Hacking+%7C+Evidence+%7C+Security+AI" alt="Animated project tagline" />
-
-<p>
-  <img src="https://img.shields.io/badge/ENGINE-Godot%204.x-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot 4.x" />
-  <img src="https://img.shields.io/badge/LANGUAGE-GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="GDScript" />
-  <img src="https://img.shields.io/badge/GENRE-Stealth%20%2B%20Investigation-111827?style=for-the-badge" alt="Stealth and investigation" />
-  <img src="https://img.shields.io/badge/STATUS-Vertical%20Slice-00B8D4?style=for-the-badge" alt="Vertical slice" />
+<p align="center">
+  <img src="assets/readme-hero.svg" alt="NEON//TRACE: DHAKA 2047 — custom animated project banner" width="100%" />
 </p>
 
-<p>
-  <a href="https://github.com/tracolerd/neon-trace-dhaka-2047/releases/tag/v0.1.0-android-debug"><strong>↓ Download Android APK</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/tracolerd/neon-trace-dhaka-2047/releases"><strong>View Releases</strong></a>
+<h1 align="center">NEON//TRACE: DHAKA 2047</h1>
+
+<p align="center">
+  <strong>Investigate the signal. Survive the system.</strong><br/>
+  A third-person 3D cyber-investigation thriller set in a fictionalized near-future Dhaka, built with Godot and GDScript.
 </p>
 
-</div>
+<p align="center">
+  <a href="https://godotengine.org/"><img src="https://img.shields.io/badge/Godot-Game_engine-478CBF?style=for-the-badge&amp;logo=godotengine&amp;logoColor=white" alt="Godot — Game engine" /></a>
+  <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html"><img src="https://img.shields.io/badge/GDScript-Gameplay-478CBF?style=for-the-badge&amp;logo=godotengine&amp;logoColor=white" alt="GDScript — Gameplay" /></a>
+  <a href="https://github.com/tracolerd/neon-trace-dhaka-2047"><img src="https://img.shields.io/badge/Vertical_slice-Prototype-00B8D4?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Vertical slice — Prototype" /></a>
+</p>
+
+<p align="center">
+  <a href="#project-details">Premise</a> · <a href="#project-setup">Run locally</a> · <a href="#project-architecture">Architecture</a> · <a href="#creator-developer-maintainer">Creator</a>
+</p>
+<p align="center">
+  <a href="https://github.com/tracolerd/neon-trace-dhaka-2047/releases/tag/v0.1.0-android-debug"><strong>↓ Download Android APK</strong></a> &nbsp;·&nbsp;   <a href="https://github.com/tracolerd/neon-trace-dhaka-2047/releases"><strong>View releases</strong></a>
+</p>
 
 ---
 
+<a id="project-details"></a>
 ## ◈ The Premise
 
 **NEON//TRACE: DHAKA 2047** is a third-person 3D cyber-investigation thriller set in a fictionalized near-future Dhaka.
@@ -126,6 +128,7 @@ The repository currently contains the foundation for:
 
 ---
 
+<a id="project-architecture"></a>
 ## ◈ Technical Architecture
 
 The project follows a **modular, data-driven, signal-based architecture** rather than concentrating gameplay logic inside a single controller.
@@ -197,6 +200,7 @@ The Android export configuration and validation notes are maintained on the `tra
 
 ---
 
+<a id="project-setup"></a>
 ## ◈ Run Locally
 
 ### Requirements
@@ -282,20 +286,20 @@ NEON//TRACE is intentionally structured so individual gameplay systems can evolv
 </div>
 ---
 
+---
+
 ## Creator, Developer & Maintainer
 
-**Created, designed, developed, and maintained by [Nurul Faiyaz](https://github.com/tracolerd).**
-
-This project is independently built and maintained by Nurul Faiyaz. The project's design, implementation, and documentation are his work.
+**Created, designed, developed, documented, and maintained independently by [Nurul Faiyaz](https://github.com/tracolerd).**
 
 <p align="center">
-  <a href="https://www.facebook.com/faiyaz.888"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
-  <a href="https://www.instagram.com/tracolerd"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="https://www.linkedin.com/in/faiyaz-xyz"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://x.com/faiyaz_explores"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
-  <a href="https://github.com/tracolerd"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="mailto:scrollfaiyaz@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://nurul-faiyaz.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0F766E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Personal website" /></a>
+  <a href="https://www.facebook.com/faiyaz.888"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&amp;logo=facebook&amp;logoColor=white" alt="Facebook" /></a>
+  <a href="https://www.instagram.com/tracolerd"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram" /></a>
+  <a href="https://www.linkedin.com/in/faiyaz-xyz"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://x.com/faiyaz_explores"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&amp;logo=x&amp;logoColor=white" alt="X" /></a>
+  <a href="https://github.com/tracolerd"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub" /></a>
+  <a href="mailto:scrollfaiyaz@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email" /></a>
+  <a href="https://nurul-faiyaz.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0F766E?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="Website" /></a>
 </p>
 
 <p align="center">
@@ -307,3 +311,7 @@ This project is independently built and maintained by Nurul Faiyaz. The project'
   <a href="mailto:scrollfaiyaz@gmail.com">Email</a> ·
   <a href="https://nurul-faiyaz.netlify.app/">Website</a>
 </p>
+
+## License
+
+See [LICENSE](LICENSE) for the license terms.
