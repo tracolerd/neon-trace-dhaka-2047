@@ -276,15 +276,7 @@ NEON//TRACE is intentionally structured so individual gameplay systems can evolv
 
 ---
 
-<div align="center">
-
-### ◈ INVESTIGATE THE SIGNAL ◈
-### **SURVIVE THE SYSTEM**
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F5FF,100:5B21B6&height=100&section=footer" alt="Animated footer" />
-
-</div>
----
+<p align="center"><strong>◈ INVESTIGATE THE SIGNAL · SURVIVE THE SYSTEM ◈</strong></p>
 
 ---
 
