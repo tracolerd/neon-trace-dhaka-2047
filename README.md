@@ -307,3 +307,7 @@ NEON//TRACE is intentionally structured so individual gameplay systems can evolv
 ## License
 
 See [LICENSE](LICENSE) for the license terms.
+
+---
+
+<p align="center"><sub>Portfolio catalog · Project 13 of 22 · <a href="https://github.com/tracolerd">Nurul Faiyaz</a></sub></p>
